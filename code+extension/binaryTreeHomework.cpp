@@ -22,6 +22,8 @@ struct TreeNode {
     TreeNode(Student s) : student(s), leftBranch(NULL), rightBranch(NULL) {}
 };
 
+//Creation of the Binary Search Tree
+
 class BST {
 public:
     TreeNode* root;
@@ -86,19 +88,6 @@ private:
     }
 };
 
-// Function to read an integer from the console and detect invalid input
-int readInt(const string& prompt) {
-    int value;
-    cout << prompt;
-    while (!(cin >> value)) {
-        cin.clear(); // Delete the error flag
-        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the invalid input
-        cout << "Invalid input. " << prompt;
-    }
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the rest of the input
-    return value;
-}
-
 // 1st Choice -> Function to add a student to the tree
 void addStudent(BST& bst) {
     string name;
@@ -159,6 +148,19 @@ void printStudentList(const BST& bst) {
     }
 }
 
+// Function to read an integer from the console and detect invalid input
+int readInt(const string& prompt) {
+    int value;
+    cout << prompt;
+    while (!(cin >> value)) {
+        cin.clear(); // Delete the error flag
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the invalid input
+        cout << "Invalid input. " << prompt;
+    }
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the rest of the input
+    return value;
+}
+
 // Function to read the user's choice and detect invalid input
 int readChoice() {
     return readInt("Write your choice: ");
@@ -169,9 +171,9 @@ int main() {
     BST bst;
 
     // Pre-populate the tree with some students
-    Student s1("Alice", 2020, 1);
-    Student s2("Bob", 2021, 2);
-    Student s3("Charlie", 2022, 3);
+    Student s1("Rachelle", 2020, 1);
+    Student s2("Robert", 2021, 2);
+    Student s3("Enoal", 2024, 3);
 
     bst.root = bst.insert(bst.root, s1);
     bst.root = bst.insert(bst.root, s2);
