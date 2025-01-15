@@ -2,4 +2,5 @@
 
 ## What's inside
 
-In this repository, you can find the homework that was asking the 01/14/25 with its dependencies (just to verify the code with integrated VSCode Compiler)
+In this repository, you can find the homework that was asking the 01/14/25 with its dependencies (just to verify the code with integrated VSCode Compiler).
+Just the "binaryTreeWorkshop.cpp" is openable!
