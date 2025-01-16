@@ -98,7 +98,8 @@ class BST
         // Helper function to remove a node
         TreeNode* removeNode(TreeNode* node, int id)
         {
-            if (node == NULL) return node;
+            if (node == NULL) 
+                return node;
 
             if (id < node->student.id)
             {
